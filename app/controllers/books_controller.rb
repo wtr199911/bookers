@@ -7,12 +7,13 @@ class BooksController < ApplicationController
 
 
   def create
-    newbook = Book.new(book_params)
-    newbook.save
+    book = Book.new(book_params)
+    book.save
     redirect_to '/books/show'
   end
 
   def show
+    @showbook = Book.find(params[:id])
   end
 
   def edit
