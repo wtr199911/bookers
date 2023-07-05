@@ -1,4 +1,8 @@
 
-<p><strong>本のタイトル:</strong><%= @showbook.title %></p>
+<p><strong>本のタイトル: </strong><%= @showbook.title %></p>
 
-<p><strong>感想:</strong><%= @showbook.body %></p>
+<p><strong>感想: </strong><%= @showbook.body %></p>
+
+<%= link_to "Edit",edit_book_path(@showbook.id) %>
+|
+<%= link_to "Back","/books" %>

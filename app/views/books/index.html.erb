@@ -26,15 +26,15 @@
    </td>
 
    <td>
-    <%= link_to 'Show', "books/#{n.id}" %>
+    <%= link_to 'Show', book_path(n.id) %>
    </td>
 
    <td>
-    <%= link_to 'Edit', 'books/edit' %>
+    <%= link_to 'Edit', edit_book_path(n.id) %>
    </td>
 
    <td>
-    <%= link_to 'Destroy', 'books' %>
+    <%= link_to 'Destroy', book_path(n.id), method: :delete %>
    </td>
 
   <% end %>
@@ -45,6 +45,16 @@
 
 
 <h2>New book</h2>
+
+<% if book.errors.any? %>
+  <%= book.errors.count %>件のエラーを発見しました
+  
+  <ul>
+   <%= book.errors.full_messages.each do |message| %>
+   <li><%= message %></li>
+   <% end %>
+  </ul>
+<% end %>
 
 <%= form_with model: Book do |f| %>
 
