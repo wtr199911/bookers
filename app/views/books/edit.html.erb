@@ -1,13 +1,26 @@
 <h1><strong>Editing Book</strong></h1>
 
 <%= form_with model: @editbook, url: book_path(@editbook.id), method: :patch do |f| %>
+  <div class="field">
+    <label for="book_title">
+          本のタイトル
+    </label>
+       <%= f.text_field :title %>
+  </div>
 
-      <h4>本のタイトル</h4>
-      <%= f.text_field :title %>
-      
-      <h4>感想</h4>
-      <%= f.text_area :body %>
-      
-      <%= f.submit 'Update Book' %>
+  <div class="field">
+    <label for="book_title">
+          感想
+    </label>
+       <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+   <%= f.submit 'Update Book' %>
+  </div>
 <% end %>
-  
+
+<%= link_to "Show",book_path(@editbook.id) %>
+|
+<%= link_to "Back", "/books" %>
+

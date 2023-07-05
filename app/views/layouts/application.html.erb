@@ -2,18 +2,6 @@
 <html>
   <head>
     <style type="text/css">
-      /*ここにスタイルシートを記述*/
-      .turbolinks-progress-bar {
-        position: field;
-        display: block;
-        top: 0;
-        left: 0;
-        height: 3px;
-        background: #0076ff;
-        z-index: 9999;
-        transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
-        transform: translates( 0, 0, 0);
-      }
     </style>
     <title>WebCampBackendNew</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,6 +9,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>

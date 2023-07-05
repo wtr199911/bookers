@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   get 'top' => 'homes#top'
-  resources :books
+  #delete 'books/:id' => 'books#destroy', as: 'destroy_book'
+  resources :books #only: [:create,:index,:show,:edit,:update]
 end
